@@ -22,7 +22,7 @@
       echo "Sorry, I don't have that draft. Goodbye."
       git checkout source 
       cd $cwd
-      return 
+      exit 
     fi
 
     # move $FILENAME from drafts to source, assuming we'll publish it
