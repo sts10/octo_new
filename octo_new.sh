@@ -11,7 +11,7 @@
   then
     git checkout drafts
     ls source/_posts
-    echo "which draft?"
+    echo "Which file from your draft folder would you like to edit? Please enter the file's full name."
     read FILENAME
 
     cd source/_posts
