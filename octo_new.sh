@@ -15,12 +15,10 @@
   INPUT="$1"
   
 
-  #  cwd=$2
-  # cwd = $(cd -)
-
-
-
   cd /Users/$USER/Documents/code/sts10.github.io 
+  
+
+
   if [[ $INPUT == "drafts" ]]
   then
     git checkout drafts
@@ -200,5 +198,4 @@
     echo "OK, we'll just leave this post in your source/_posts directory, unstaged."
     cd ../../  # return to main octopress directory  
 
-    # cd /Users/samschlinkert/Documents/code/sts10.github.io 
   fi
