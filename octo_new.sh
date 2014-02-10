@@ -1,6 +1,6 @@
+# octo_ new 
 
-
-
+# https://github.com/sts10/octo_new
 
 
   INPUT="$1"
@@ -16,7 +16,6 @@
 
      cd source/_posts/
 
-    # ls source/_posts
 
     FILENAME="q"
 
@@ -38,8 +37,7 @@
     done
 
 
-   
-    # read FILENAME
+  
 
     if [[ $FILENAME == "q" ]]
     then

@@ -14,7 +14,7 @@ More information available here: http://sts10.github.io/blog/2014/02/06/octo-new
 To install octo_new v 3.3, 
 
 1. [clone my Git repo](https://github.com/sts10/octo_new). I’d recommend cloning it somewhere in your “code” directory. Inside you’ll find a .sh file and a README. 
-2. Open the octo_new.sh file in a text editor like Sublime. On line 19, put in the path to your Octopress directory (user.github.io). Then verify that line 26 is the correct path from your github.io directory to your posts. 
+2. Open the octo_new.sh file in a text editor like Sublime. On line 9, put in the path to your Octopress directory (user.github.io). Then verify that line 17 is the correct path from your github.io directory to your posts. 
 3. Now navigate to your user.github.io directory in your terminal. if you run ```git branch``` you should see two branches: “source” and “master”. Create a new branch called “drafts” but typing ```git branch drafts```. Do NOT checkout the new “drafts” branch, just create. Keep “source” checked out.  
 4. Next, you’ll want to put a function in your bash profile so you can call octo_new from anywhere in your terminal. To open your bash profile, run the following in your command line: ```open ~/.bash_profile```. Paste in this function in the top level:
 ```
