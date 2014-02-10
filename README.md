@@ -14,6 +14,6 @@ Installation for v. 3.3+ is a bit tricky.
 2. In your octopress blog directory, create a new branch called drafts.
 
 3. Place the following function in to ~/.bash_profile again, with corrected path to where ever you're putting this .sh file :
-   ``` function octo_new { bash /Users/$USER/Documents/code/octo_new/octo_new.sh "$1" $(pwd) $3 }```
+   ``` function octo_new { bash /Users/$USER/Documents/code/octo_new/octo_new.sh "$1"   }```
 
 
