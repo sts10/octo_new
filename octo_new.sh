@@ -24,11 +24,31 @@
   if [[ $INPUT == "drafts" ]]
   then
     git checkout drafts
-    ls source/_posts
-    echo "Which file from your draft folder would you like to edit? Please enter the file's full name."
-    read FILENAME
 
-    cd source/_posts
+     cd source/_posts
+
+    # ls source/_posts
+
+    PS3="Type a number or 'q' to quit: "
+  
+     echo "Which file from your draft folder would you like to edit? Please enter the file's full name."
+
+    # Create a list of files to display
+    fileList=$(find . -maxdepth 1 -type f)
+     
+    # Show a menu and ask for input. 
+    select draftFileName in $fileList; do
+        if [ -n "$draftFileName" ]; then
+            FILENAME=${draftFileName}
+        fi
+        break
+    done
+
+
+   
+    # read FILENAME
+
+   
 
     if [ ! -f $FILENAME ]  # if user entry does not match an existing draft file name. 
     then
