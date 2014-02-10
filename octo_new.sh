@@ -36,6 +36,8 @@
     # Create a list of files to display  http://wuhrr.wordpress.com/2009/09/10/simple-menu-with-bashs-select-command/
     fileList=$(find . -maxdepth 1 -type f \( ! -iname ".*" \))  # ignores dot files like .DS_STORE 
 
+    
+
     # Show a menu and ask for input. 
     select draftFileName in $fileList; do
         if [ -n "$draftFileName" ]; then
