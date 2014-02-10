@@ -1,14 +1,14 @@
 # Installation: 
 
-# 1. Go through this code and enter the path to YOUR octopress blog directory. 
+# 1. Go through this code and enter the path to YOUR octopress blog directory where appropriate. 
 
-# 2. In your octopress log directory, create a new branch in addition to source called drafts. 
+# 2. In your octopress blog directory, create a new branch called drafts.
 
-# 3. Place the following function in to ~/.bash_profile
+# 3. Place the following function in to ~/.bash_profile again, with corrected path to whereever you're putting
+#    this .sh file :
+#       function octo_new { bash /Users/$USER/Documents/code/octo_new/octo_new.sh "$1" $(pwd) $3 }
 
-# function octo_new {
-#   bash /Users/$USER/Documents/code/octo_new/octo_new.sh "$1" $(pwd) $3
-# }
+
 
 
 
