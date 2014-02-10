@@ -25,17 +25,19 @@
   then
     git checkout drafts
 
-     cd source/_posts
+     cd source/_posts/
 
     # ls source/_posts
+
+    FILENAME="q"
 
     PS3="Type a number or 'q' to quit: "
   
      echo "Which file from your draft folder would you like to edit? Please enter the file's full name."
 
-    # Create a list of files to display
-    fileList=$(find . -maxdepth 1 -type f)
-     
+    # Create a list of files to display  http://wuhrr.wordpress.com/2009/09/10/simple-menu-with-bashs-select-command/
+    fileList=$(find . -maxdepth 1 -type f \( ! -iname ".*" \))  # ignores dot files like .DS_STORE 
+
     # Show a menu and ask for input. 
     select draftFileName in $fileList; do
         if [ -n "$draftFileName" ]; then
@@ -48,7 +50,15 @@
    
     # read FILENAME
 
-   
+    if [[ $FILENAME == "q" ]]
+    then
+      echo ''
+      echo "Sorry, I don't have that draft. Goodbye."
+      git checkout source 
+      # cd $cwd
+      exit 
+    fi
+
 
     if [ ! -f $FILENAME ]  # if user entry does not match an existing draft file name. 
     then
@@ -105,10 +115,9 @@
   echo "q - quit without doing either of the above"
   echo ''
 
-  # echo "Would you like to commit & push your /n git and publish your Octopress blog now? (y/n)"
 
-  read -p "" -n 1 -r  # Maybe give a "(d)elete this post" option 
-  echo ''  # (optional) move to a new line
+  read -p "" -n 1 -r  
+  echo ''  
 
   git checkout source
 
@@ -162,7 +171,6 @@
 
       touch source/_posts/$FILENAME
       
-
     fi 
 
     git add .
