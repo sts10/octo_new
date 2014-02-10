@@ -1,1 +1,3 @@
-git checkout | grep 'drafts'
+
+
+if !(git checkout | grep 'drafts')
