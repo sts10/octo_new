@@ -13,8 +13,10 @@
 
 
   INPUT="$1"
-  cwd=$2
+  
 
+  #  cwd=$2
+  # cwd = $(cd -)
 
 
 
@@ -33,7 +35,7 @@
       echo ''
       echo "Sorry, I don't have that draft. Goodbye."
       git checkout source 
-      cd $cwd
+      # cd $cwd
       exit 
     fi
 
@@ -104,7 +106,7 @@
       rake generate
       rake deploy 
 
-      cd $cwd
+    # cd $cwd
 
   elif [[ $REPLY =~ ^[Dd]$ ]]
   then 
@@ -119,9 +121,9 @@
         git push origin source
         echo ''
         echo "Deleted "$FILENAME", removed it from Git, and committed and pushed Git"  
-        cd $cwd
+        # cd $cwd
       else
-        echo "OK, we'll just leave it there and cd you into your blog's directory."
+        echo "OK, we'll just leave it in your _posts folder."
         cd ../../
       fi
   elif [[ $REPLY =~ ^[Ss]$ ]]
@@ -167,7 +169,7 @@
     cd ../../
 
   else
-    echo "OK, we'll just leave it there and cd you into your blog's directory."
+    echo "OK, we'll just leave this post in your source/_posts directory, unstaged."
     cd ../../  # return to main octopress directory  
 
     # cd /Users/samschlinkert/Documents/code/sts10.github.io 
