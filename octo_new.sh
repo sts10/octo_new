@@ -28,7 +28,7 @@
 
     cd source/_posts
 
-    if [ ! -f $FILENAME ]  #if this IS a new draft
+    if [ ! -f $FILENAME ]  # if user entry does not match an existing draft file name. 
     then
       echo ''
       echo "Sorry, I don't have that draft. Goodbye."
