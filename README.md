@@ -3,15 +3,15 @@ octo_new
 
 A shell script that serves as a crude CMS for Octopress blogs. 
 
-v 3.3 
+v 0.3
 
 More information available here: http://sts10.github.io/blog/2014/02/06/octo-new-making-octopress-easier-with-bash/
 
-### Installation (as of v 3.3)
+### Installation (as of v 0.3)
 
 **Recommend you read through the code first** 
 
-To install octo_new v 3.3, 
+To install octo_new v 0.3, 
 
 1. [clone my Git repo](https://github.com/sts10/octo_new). I’d recommend cloning it somewhere in your “code” directory. Inside you’ll find a .sh file and a README. 
 2. Open the octo_new.sh file in a text editor like Sublime. On line 9, put in the path to your Octopress directory (user.github.io). Then verify that line 17 is the correct path from your github.io directory to your posts. 
