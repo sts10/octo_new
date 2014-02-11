@@ -21,7 +21,7 @@
 
     PS3="Type a number or 'q' to quit: "
   
-     echo "Which file from your draft folder would you like to edit? Please enter the file's full name."
+     # echo "Which file from your draft folder would you like to edit? Please enter the file's full name."
 
     # Create a list of files to display  http://wuhrr.wordpress.com/2009/09/10/simple-menu-with-bashs-select-command/
     fileList=$(find . -maxdepth 1 -type f \( ! -iname ".*" \))  # ignores dot files like .DS_STORE 
